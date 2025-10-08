@@ -1,0 +1,278 @@
+/* --- Глобальні стилі та змінні --- */
+:root {
+    --bg-dark: #0D0D0D;
+    --primary-color: #FF5500;
+    --primary-hover: #E04B00;
+    --primary-dark-glow: rgba(255, 85, 0, 0.15);
+    --primary-light-glow: rgba(255, 85, 0, 0.4); /* Колір для світіння карток */
+    --text-light: #FFFFFF;
+    --text-dark: #A0A3AD;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-bg: #131313;
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Хедер --- */
+header {
+    background-color: transparent;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Логотип зліва, кнопка справа */
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* --- Кнопки --- */
+.btn {
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.btn-hub {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-light);
+}
+
+.btn-hub:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--text-light);
+}
+
+.btn-cta {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+/* --- Секція "Герой" --- */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 120px 20px 40px;
+    background: radial-gradient(circle at 50% 50%, var(--primary-dark-glow), var(--bg-dark) 60%);
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-logo-text {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: var(--text-light);
+}
+
+#hero h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.stats-pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.stat-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-radius: 50px;
+    padding: 15px 30px;
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.stat-pill h4 {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.stat-pill span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.stat-pill span i {
+    color: var(--primary-color);
+}
+
+/* --- Основні секції та картки --- */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 60px;
+}
+
+#how-it-works {
+    background-color: #000; /* Трохи інший фон для візуального розділення */
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05); /* Збільшення картки */
+    border-color: var(--primary-color);
+    box-shadow: 0 0 25px var(--primary-light-glow), 0 5px 15px rgba(0,0,0,0.5); /* Ефект світіння */
+}
+
+.feature-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 25px;
+}
+
+.feature-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: var(--text-dark);
+}
+
+/* --- Футер --- */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-dark);
+}
+
+/* --- Анімації --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-on-scroll:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.animate-on-scroll:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+/* --- Адаптивність --- */
+@media (max-width: 768px) {
+    .hero-logo-text {
+        font-size: 3rem;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}

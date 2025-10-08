@@ -1,0 +1,94 @@
+/* --- Глобальні стилі та змінні --- */
+:root {
+    --bg-dark: #0D0D0D;
+    --bg-light: #1A1B22;
+    --primary-color: #FF5500;
+    --text-light: #FFFFFF;
+    --text-dark: #A0A3AD;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Manrope', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding-top: 65px;
+}
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+a { text-decoration: none; color: inherit; }
+
+/* --- Хедер --- */
+.main-header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+/* Оновлено для коректного відображення без правої частини */
+.main-header nav { display: flex; justify-content: flex-start; align-items: center; height: 64px; }
+.header-left { display: flex; align-items: center; gap: 30px; }
+.logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; }
+.nav-link { color: var(--text-dark); font-weight: 500; transition: color 0.2s ease; }
+.nav-link.active, .nav-link:hover { color: var(--text-light); }
+/* Видалено стилі для .header-right */
+
+/* --- Основний Макет --- */
+.main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 24px; padding-top: 30px; }
+.content-area { display: flex; flex-direction: column; gap: 24px; }
+.sidebar { display: flex; flex-direction: column; gap: 24px; }
+
+/* --- Секція Контенту --- */
+.game-status { display: flex; align-items: center; gap: 15px; padding: 15px; background: var(--bg-light); border-radius: 8px; }
+.game-status p { color: var(--text-dark); }
+.promo-banner { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://placehold.co/800x250/111111/FF5500') no-repeat center center/cover; border-radius: 8px; padding: 40px; display: flex; flex-direction: column; justify-content: center; }
+.banner-text h4 { color: var(--text-dark); font-weight: 500; }
+.banner-text h2 { font-family: var(--font-heading); font-size: 3rem; }
+.prize-pool { background-color: #00A3FF; padding: 5px 15px; border-radius: 5px; font-weight: 700; display: inline-block; margin-top: 10px; }
+
+.tournament-list { background-color: var(--bg-light); border-radius: 8px; padding: 20px; }
+.tournament-list h3 { margin-bottom: 20px; }
+.tournament-item { display: grid; grid-template-columns: auto 1fr repeat(4, auto); align-items: center; gap: 20px; padding: 15px; border-radius: 6px; transition: background-color 0.2s ease; border-bottom: 1px solid var(--border-color); }
+.tournament-item:last-child { border-bottom: none; }
+.tournament-item:hover { background-color: rgba(255,255,255,0.05); }
+.tournament-item.premium { border-left: 3px solid #FFD700; }
+.tour-logo img { border-radius: 50%; }
+.tour-info h4 { font-size: 1rem; }
+.tour-status { color: var(--primary-color); font-size: 0.8rem; font-weight: 700; }
+.tour-details span { font-size: 0.8rem; color: var(--text-dark); }
+.tour-details p { font-weight: 500; }
+.tour-arrow { color: var(--text-dark); }
+
+/* --- Сайдбар --- */
+.profile-card { background-color: var(--bg-light); border-radius: 8px; padding: 20px; }
+.profile-header { text-align: center; margin-bottom: 20px; min-height: 20px; /* Додано мінімальну висоту, щоб макет не стрибав */ }
+.play-button-wrapper { margin-bottom: 20px; }
+
+/* Оновлено стилі для кнопки PLAY, яка тепер є посиланням */
+.play-btn {
+    display: block; /* Важливо для посилань, щоб вони займали всю ширину */
+    text-align: center; /* Центруємо текст */
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    background-color: #333;
+    color: var(--text-light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.play-btn:hover { background-color: #444; }
+
+.profile-nav { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+.profile-nav li a { display: flex; align-items: center; gap: 10px; padding: 10px; border-radius: 5px; transition: background-color 0.2s ease; color: var(--text-dark); }
+.profile-nav li a:hover { background-color: rgba(255,255,255,0.05); color: var(--text-light); }
+.profile-nav li a i { width: 20px; text-align: center; }
+
+/* Видалено стилі для .widget-card */

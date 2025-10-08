@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeIt Hub</title>
+    <link rel="stylesheet" href="hub.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="container">
+            <div class="header-left">
+                <a href="index.html" class="logo">🏆 MakeIt</a>
+                <a href="#" class="nav-link active">Головна</a>
+                <a href="#" class="nav-link">Матчі</a>
+                <a href="#" class="nav-link">Турніри</a>
+            </div>
+            <!-- Видалено блок header-right з інформацією про користувача -->
+        </nav>
+    </header>
+
+    <div class="main-layout container">
+        <!-- Основний контент -->
+        <main class="content-area">
+            <div class="game-status">
+                <!-- Видалено іконку гри -->
+                <div>
+                    <h4>MakeIt Custom Game</h4>
+                    <!-- Змінено кількість матчів -->
+                    <p>16 гравців, 1 матчі live.</p>
+                </div>
+            </div>
+
+            <!-- Промо-банер (Без змін) -->
+            <div class="promo-banner">
+                <div class="banner-text">
+                    <h4>TOURNAMENT</h4>
+                    <h2>MAKEIT LAUNCH CUP</h2>
+                    <span class="prize-pool">PRIZE POOL: $1</span>
+                </div>
+            </div>
+
+            <!-- Список турнірів (Без змін) -->
+            <div class="tournament-list">
+                <h3>Активні Турніри</h3>
+                <div class="tournament-item">
+                    <div class="tour-logo"><img src="https://placehold.co/48x48/FF5500/0D0D0D?text=M" alt=""></div>
+                    <div class="tour-info">
+                        <h4>MakeIt Qualification #1</h4>
+                        <span class="tour-status">REGISTRATION IN PROGRESS</span>
+                    </div>
+                    <div class="tour-details"><span>Start</span><p>11 Oct at 18:00</p></div>
+                    <div class="tour-details"><span>Mode</span><p>5v5</p></div>
+                    <div class="tour-details"><span>Participants</span><p>5 / 32</p></div>
+                    <div class="tour-details"><span>Prize</span><p>$1</p></div>
+                    <a href="#" class="tour-arrow"><i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="tournament-item premium">
+                    <div class="tour-logo"><img src="https://placehold.co/48x48/FFD700/0D0D0D?text=P" alt=""></div>
+                    <div class="tour-info">
+                        <h4>Wingman PREMIUM</h4>
+                        <span class="tour-status">REGISTRATION IN PROGRESS</span>
+                    </div>
+                    <div class="tour-details"><span>Start</span><p>in 50 minutes</p></div>
+                    <div class="tour-details"><span>Mode</span><p>2v2</p></div>
+                    <div class="tour-details"><span>Participants</span><p>10 / 16</p></div>
+                    <div class="tour-details"><span>Prize</span><p>$0.1</p></div>
+                    <a href="#" class="tour-arrow"><i class="fas fa-chevron-right"></i></a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Бічна панель -->
+        <aside class="sidebar">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <!-- Видалено нік та ELO -->
+                </div>
+                <div class="play-button-wrapper">
+                    <!-- Тег <button> замінено на <a> для посилання -->
+                    <a href="https://discord.gg/bJEndeWDgk" target="_blank" class="play-btn"><i class="fas fa-play"></i> PLAY</a>
+                </div>
+                <ul class="profile-nav">
+                    <li><a href="#"><i class="fas fa-user"></i> Profile</a></li>
+                    <li><a href="#"><i class="fas fa-history"></i> My matches</a></li>
+                    <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                    <li><a href="#"><i class="fas fa-sign-out-alt"></i> Log out</a></li>
+                </ul>
+            </div>
+
+            <!-- Видалено віджет Custom Matches -->
+        </aside>
+    </div>
+
+</body>
+</html>
